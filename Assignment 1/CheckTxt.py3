@@ -7,8 +7,6 @@ wordList = [word.translate(None, ",.;@#?!&$") for word in splitByWord]
 wordListUnique = list(set(wordList))
 wordListUnique.sort()
 
-print wordListUnique
-
 splitBySentence = textA.split(".")
 noPunctuation = [sentence.translate(None, ",.;@#?!&$") for sentence in splitBySentence]
 noWhiteSpace = [string.strip() for string in noPunctuation]
@@ -41,7 +39,6 @@ def longest_sentences(arrayOfSentenceLengths):
 
 
 def longest_words(listOfWords, integer):
-  listOfWords.sort 
   listOfWords.sort(key=len, reverse=True)
   listLongestWords =  ", " .join(listOfWords[:integer])
   print ("The {number} longest unique words in this list are {list}.".format(number = integer, list = listLongestWords))
