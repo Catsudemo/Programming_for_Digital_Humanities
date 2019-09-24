@@ -5,6 +5,9 @@ noCaps = textA.lower()
 splitByWord = noCaps.split( )
 wordList = [word.translate(None, ",.;@#?!&$") for word in splitByWord]
 wordListUnique = list(set(wordList))
+wordListUnique.sort()
+
+print wordListUnique
 
 splitBySentence = textA.split(".")
 noPunctuation = [sentence.translate(None, ",.;@#?!&$") for sentence in splitBySentence]
