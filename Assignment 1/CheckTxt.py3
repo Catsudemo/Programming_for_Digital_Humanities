@@ -40,7 +40,8 @@ def longest_sentences(arrayOfSentenceLengths):
 def longest_words(listOfWords, integer):
   listOfWords.sort 
   listOfWords.sort(key=len, reverse=True)
-  print ("The {number} longest unique words in this list are {list}".format(number = integer, list = listOfWords[:integer]))
+  listLongestWords =  ", " .join(listOfWords[:integer])
+  print ("The {number} longest unique words in this list are {list}.".format(number = integer, list = listLongestWords))
 
 
 print ("There are {words} words in this piece of text".format(words=numberWords))
